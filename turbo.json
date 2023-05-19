@@ -2,11 +2,8 @@
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": ["**/.env.*local"],
   "pipeline": {
-    "core:build": {
-      "dependsOn": ["bundle-errors"],
-      "cache": false
-    },
     "build": {
+      "dependsOn": ["^build"],
       "cache": false
     },
     "lint": {
@@ -16,10 +13,6 @@
       "outputs": []
     },
     "dev": {
-      "cache": false
-    },
-    "core:package": {
-      "dependsOn": ["core:build"],
       "cache": false
     }
   }
