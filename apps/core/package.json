@@ -1,0 +1,56 @@
+{
+  "name": "@gregoire.ciles/split-text",
+  "description": "SplitText is a small and type-safe library that split HTML text into characters and/or words.",
+  "version": "0.1.0",
+  "license": "gpl-3.0",
+  "engines": {
+    "node": ">=16.0.0",
+    "yarn": ">=1.22.0",
+    "pnpm": ">=8.2.0"
+  },
+  "author": {
+    "name": "Grégoire Ciles",
+    "url": "https://twitter.com/gregoireciles"
+  },
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "source": "./src/index.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.module.js",
+  "unpkg": "./dist/index.umd.js",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "require": "./dist/index.js",
+    "default": "./dist/index.modern.mjs"
+  },
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && microbundle",
+    "dev": "microbundle watch",
+    "release": "changeset version",
+    "pub:release": "pnpm publish --access public"
+  },
+  "devDependencies": {
+    "microbundle": "^0.15.1",
+    "typescript": "^5.0.4"
+  },
+  "keywords": [
+    "split-text",
+    "split",
+    "html",
+    "text",
+    "characters",
+    "words"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GregoireCiles/split-text.git"
+  },
+  "homepage": "https://github.com/GregoireCiles/split-text#readme",
+  "bugs": {
+    "url": "https://github.com/GregoireCiles/split-text/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

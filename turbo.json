@@ -1,0 +1,26 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env.*local"],
+  "pipeline": {
+    "core:build": {
+      "dependsOn": ["bundle-errors"],
+      "cache": false
+    },
+    "build": {
+      "cache": false
+    },
+    "lint": {
+      "outputs": []
+    },
+    "test": {
+      "outputs": []
+    },
+    "dev": {
+      "cache": false
+    },
+    "core:package": {
+      "dependsOn": ["core:build"],
+      "cache": false
+    }
+  }
+}
