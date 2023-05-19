@@ -32,6 +32,11 @@ jobs:
       - name: Build the package
         run: pnpm build:core
 
+      - name: Authenticate to NPM
+        run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> apps/core/.npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
       - name: Create Version PR or Publish to NPM
         id: changesets
         uses: changesets/action@v1.4.1
