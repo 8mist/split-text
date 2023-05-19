@@ -1,7 +1,7 @@
 {
   "name": "@gregoire.ciles/split-text",
   "description": "SplitText is a small and type-safe library that split HTML text into characters and/or words.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "gpl-3.0",
   "engines": {
     "node": ">=16.0.0",
@@ -18,9 +18,12 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.module.js",
   "unpkg": "./dist/index.umd.js",
+  "files": [
+    "dist"
+  ],
   "exports": {
     "types": "./dist/index.d.ts",
-    "require": "./dist/index.js",
+    "require": "./dist/index.cjs",
     "default": "./dist/index.modern.mjs"
   },
   "scripts": {
@@ -44,7 +47,8 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GregoireCiles/split-text.git"
+    "url": "git+https://github.com/GregoireCiles/split-text.git",
+    "directory": "packages/split-text"
   },
   "homepage": "https://github.com/GregoireCiles/split-text#readme",
   "bugs": {
