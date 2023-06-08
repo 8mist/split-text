@@ -137,7 +137,11 @@ class SplitText {
       const wholeWord = wholeWords[i];
 
       // Create a node for the word.
-      const wordNode = createNode({ tag: this.tag, text: wholeWord });
+      const wordNode = createNode({
+        tag: this.tag,
+        text: wholeWord,
+        className: this.options?.wordsClass,
+      });
 
       // Create an array to store the temporary characters.
       let tempChars: HTMLElement[] = [];
@@ -146,7 +150,11 @@ class SplitText {
         // Split the word into an array of characters.
         tempChars = wholeWord
           .split('')
-          .map((char) => (char !== ' ' ? createNode({ tag: this.tag, text: char }) : undefined))
+          .map((char) =>
+            char !== ' '
+              ? createNode({ tag: this.tag, text: char, className: this.options?.charsClass })
+              : undefined,
+          )
           .filter((node) => node !== undefined);
 
         // Add the characters to the array of characters.
