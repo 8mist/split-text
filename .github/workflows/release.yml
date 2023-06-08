@@ -18,12 +18,12 @@ jobs:
       - name: Use PNPM
         uses: pnpm/action-setup@v2.2.4
         with:
-          version: 8.2.0
+          version: 8.6.0
 
-      - name: Use Node.js 16
+      - name: Use Node.js 18
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 18.x
           cache: 'pnpm'
 
       - name: Install NPM Dependencies
