@@ -50,7 +50,7 @@ importers:
     dependencies:
       '@gregoire.ciles/split-text':
         specifier: ^0.2.2
-        version: link:../../apps/core
+        version: 0.2.2
       gsap:
         specifier: ^3.11.5
         version: 3.11.5
@@ -1791,6 +1791,11 @@ packages:
   /@eslint/js@8.40.0:
     resolution: {integrity: sha512-ElyB54bJIhXQYVKjDSvCkPO1iU1tSAeVQJbllWJq1XQSmmA4dgFk8CbiBGpiOPxleE48vDogxCtmMYku4HSVLA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dev: false
+
+  /@gregoire.ciles/split-text@0.2.2:
+    resolution: {integrity: sha512-Zzb1zSE47kf4VOsofwf1L/MTtBCHoQDxxF0+wv7BqSTjLW3KAIrONEtAHxjYTtCOXiPmLk5XG/NBCgZ+Ty+6ZQ==}
+    engines: {node: '>=16.0.0', pnpm: '>=8.2.0', yarn: '>=1.22.0'}
     dev: false
 
   /@humanwhocodes/config-array@0.11.8:
