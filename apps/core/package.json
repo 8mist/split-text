@@ -30,11 +30,14 @@
     "clean": "rm -rf ./dist",
     "build": "npm run clean && microbundle",
     "dev": "microbundle watch",
+    "check-size": "size-limit",
     "release": "changeset version",
     "pub:release": "pnpm publish --access public"
   },
   "devDependencies": {
+    "@size-limit/preset-small-lib": "^8.2.4",
     "microbundle": "^0.15.1",
+    "size-limit": "^8.2.4",
     "typescript": "^5.0.4"
   },
   "keywords": [
@@ -54,6 +57,20 @@
   "bugs": {
     "url": "https://github.com/GregoireCiles/split-text/issues"
   },
+  "size-limit": [
+    {
+      "limit": "3 kB",
+      "path": "dist/index.cjs"
+    },
+    {
+      "limit": "3 kB",
+      "path": "./dist/index.module.js"
+    },
+    {
+      "limit": "2 kB",
+      "path": "./dist/index.modern.mjs"
+    }
+  ],
   "publishConfig": {
     "access": "public"
   }
