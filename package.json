@@ -1,7 +1,7 @@
 {
   "name": "split-text",
   "description": "SplitText is a small and type-safe library that split HTML text into characters and/or words.",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "license": "gpl-3.0",
   "engines": {
     "node": ">=16.0.0",
@@ -19,6 +19,7 @@
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
     "preview": "turbo run preview",
+    "check-size": "turbo run check-size",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "release": "changeset version",
     "pub:release": "turbo run pub:release"

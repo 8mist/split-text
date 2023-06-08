@@ -1,6 +1,8 @@
-import type { CreateNodeOptions, TargetElement } from '../types';
-import { SplitTextError } from './error';
-import { isString } from './is';
+import type { CreateNodeOptions, TargetElement } from '@/types';
+
+import { addClass } from '@/utils/classes';
+import { SplitTextError } from '@/utils/error';
+import { isString } from '@/utils/is';
 
 /**
  * Get the element that will be split.
@@ -35,7 +37,7 @@ export function getElement(targetElement: TargetElement): HTMLElement {
  *
  * @returns {HTMLElement} The created node.
  */
-export function createNode({ tag, text }: CreateNodeOptions): HTMLElement {
+export function createNode({ tag, text, className }: CreateNodeOptions): HTMLElement {
   const node = document.createElement(tag);
   node.textContent = text;
 
@@ -43,6 +45,8 @@ export function createNode({ tag, text }: CreateNodeOptions): HTMLElement {
     display: 'inline-block',
     position: 'relative',
   });
+
+  addClass(node, className);
 
   return node;
 }
