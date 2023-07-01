@@ -6,7 +6,7 @@ on:
 
 jobs:
   release:
-    if: ${{ github.repository_owner == 'GregoireCiles' }}
+    if: ${{ github.repository_owner == 'Cos1x' }}
     name: Create a PR for release workflow
     runs-on: ubuntu-latest
     steps:
