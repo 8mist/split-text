@@ -1,7 +1,7 @@
 {
   "name": "@gregoire.ciles/split-text",
   "description": "SplitText is a small and type-safe library that split HTML text into characters and/or words.",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "license": "gpl-3.0",
   "engines": {
     "node": ">=16.0.0",
