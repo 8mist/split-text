@@ -46,7 +46,9 @@ export function createNode({ tag, text, className }: CreateNodeOptions): HTMLEle
     position: 'relative',
   });
 
-  addClass(node, className);
+  if (className) {
+    addClass(node, className);
+  }
 
   return node;
 }
